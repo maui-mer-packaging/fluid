@@ -1,0 +1,33 @@
+Name       : fluid
+Version    : 0.2.0.20140101.e9ea587
+Release    : 1
+Group      : Applications/System
+License    : BSD
+Summary    : fluid package
+Description: A package of fluid functions
+Sources    : 
+    - fluid-%{version}.tar.bz2
+Configure  : cmake 
+ConfigOptions: 
+    - -DCMAKE_BUILD_TYPE=RelWithDebInfo 
+#    - -DCMAKE_INSTALL_QMLDIR='${CMAKE_INSTALL_LIBDIR}/qt5/qml' 
+#    - -DCMAKE_INSTALL_PLUGINSDIR='${CMAKE_INSTALL_LIBDIR}/qt5/plugins' 
+PkgConfigBR:
+    - liblzma
+    - Qt5Core
+    - Qt5Xml
+    - Qt5Gui
+    - Qt5DBus
+    - Qt5Widgets
+    - Qt5Svg
+    - Qt5Qml
+    - Qt5Quick
+    - Qt5OpenGL
+    - Qt5Designer
+
+PkgBR:
+    - cmake
+    - python
+    - bzip2-devel
+#    - wayland-devel
+
