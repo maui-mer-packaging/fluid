@@ -1,12 +1,14 @@
 Name       : fluid
 Version    : 0.2.0.20140101.e9ea587
 Release    : 1
-Group      : Applications/System
-License    : BSD
-Summary    : fluid package
-Description: A package of fluid functions
+Group      : System/Libraries
+License    : LGPLv2.1+
+URL        : https://github.com/mauios/fluid.git
+Summary    : Library for fluid and dynamic applications development with QtQuick
+Description: Library for fluid and dynamic applications development with QtQuick.
 Sources    : 
-    - fluid-%{version}.tar.bz2
+    - fluid-%{version}.tar.xz
+SetupOptions: -q -n %{name}-%{version}/upstream
 Configure  : cmake 
 ConfigOptions: 
     - -DCMAKE_BUILD_TYPE=RelWithDebInfo 
@@ -23,4 +25,5 @@ PkgBR:
     - bzip2-devel
 
 Files:
+    - "%doc COPYING.LIB README.md"
     - "%{_libdir}/hawaii/qml/Fluid/"
